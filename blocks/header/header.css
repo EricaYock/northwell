@@ -4,7 +4,6 @@ header .nav-wrapper {
   width: 100%;
   z-index: 2;
   position: fixed;
-  border-bottom: 1px solid var(--border-color);
 }
 
 header nav {
@@ -39,8 +38,8 @@ header nav[aria-expanded='true'] {
   header nav {
     display: grid;
     grid-template:
-      'brand brand' auto
-      'sections tools' auto / 1fr auto;
+      'brand tools' auto
+      'sections sections' auto / 1fr auto;
     gap: 0;
     max-width: 1264px;
     padding: 0 32px;
@@ -165,10 +164,9 @@ header nav .nav-brand img {
 
 @media (width >= 900px) {
   header .nav-brand {
-    padding: 16px 0 8px;
+    padding: 20px 0 16px;
     font-size: var(--heading-font-size-l);
     color: var(--link-color);
-    border-bottom: 1px solid var(--border-color);
   }
 
   header nav .nav-brand img {
@@ -221,8 +219,8 @@ header nav .nav-sections ul > li > ul > li {
     display: block;
     visibility: visible;
     white-space: nowrap;
-    padding: 10px 0;
-    border-bottom: 3px solid var(--link-color);
+    padding: 12px 0;
+    border-top: 1px solid var(--border-color);
   }
 
   header nav[aria-expanded='true'] .nav-sections {
@@ -310,8 +308,7 @@ header nav .nav-tools {
     align-items: center;
     justify-content: flex-end;
     gap: 24px;
-    padding: 10px 0;
-    border-bottom: 3px solid var(--link-color);
+    padding: 20px 0 16px;
   }
 
   header nav .nav-tools ul {
