@@ -407,6 +407,7 @@ main .default-content-wrapper > picture:first-child {
 main .default-content-wrapper > picture:first-child img {
   width: 100%;
   height: auto;
+  max-height: 350px;
   object-fit: cover;
 }
 
@@ -430,7 +431,7 @@ main .default-content-wrapper > picture:first-child + p + p + p {
   clear: both;
 }
 
-@media (width >= 900px) {
+@media (width >= 600px) {
   main .default-content-wrapper > picture:first-child {
     float: left;
     width: 48%;
@@ -523,7 +524,16 @@ main .default-content-wrapper > ul > li > ul > li h4 a:hover {
 }
 
 /* Inline image+text pairs (Spine Care, Limb Care style) */
-@media (width >= 900px) {
+/* stylelint-disable no-descending-specificity */
+main .default-content-wrapper > picture:not(:first-child) img {
+  max-height: 300px;
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+@media (width >= 600px) {
   main .default-content-wrapper > picture:not(:first-child) {
     float: right;
     width: 40%;
@@ -534,17 +544,11 @@ main .default-content-wrapper > ul > li > ul > li h4 a:hover {
   main .default-content-wrapper > picture:not(:first-child) img {
     width: 100%;
     height: auto;
-    object-fit: cover;
-    border-radius: 4px;
+    max-height: none;
   }
 
   main .default-content-wrapper > picture:not(:first-child) + h3 {
     clear: none;
   }
-
-  /* Alternate: even pictures float left */
-  main .default-content-wrapper > picture:not(:first-child) + h3 + p + p + picture {
-    float: left;
-    margin: 0 32px 24px 0;
-  }
 }
+/* stylelint-enable no-descending-specificity */
