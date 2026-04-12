@@ -89,7 +89,9 @@
   }
 }
 
-/* ===== Overlay variant (text on image with gradient - ortho page) ===== */
+/* ===== Overlay variant (text on image with diagonal shape) ===== */
+
+/* Use both .overlay class AND container-level class for AEM compatibility */
 .hero-healthcare.overlay {
   min-height: 500px;
 }
@@ -172,3 +174,94 @@
     line-height: 1.6;
   }
 }
+
+/* ===== AEM container-level fallback for overlay variant ===== */
+/* stylelint-disable no-descending-specificity */
+.hero-healthcare-overlay-container .hero-healthcare-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-healthcare-overlay-container .hero-healthcare {
+  min-height: 500px;
+}
+
+.hero-healthcare-overlay-container .hero-healthcare > div:first-child {
+  position: absolute;
+  inset: 0;
+  min-height: unset;
+  z-index: 0;
+}
+
+.hero-healthcare-overlay-container .hero-healthcare > div:first-child picture {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-healthcare-overlay-container .hero-healthcare > div:last-child {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 500px;
+  padding: 40px 24px;
+  max-width: 600px;
+  background-color: #002f6c;
+  clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);
+}
+
+.hero-healthcare-overlay-container .hero-healthcare h2 {
+  color: #fff;
+  font-size: 32px;
+  line-height: 1.1;
+  margin: 0 0 20px;
+}
+
+.hero-healthcare-overlay-container .hero-healthcare p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 24px;
+  max-width: 480px;
+}
+
+.hero-healthcare-overlay-container .hero-healthcare a.button {
+  display: inline-block;
+  color: #002f6c;
+  background-color: #6ecad4;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.hero-healthcare-overlay-container .hero-healthcare a.button:hover {
+  background-color: #5bb8c2;
+  text-decoration: none;
+}
+
+@media (width >= 900px) {
+  .hero-healthcare-overlay-container .hero-healthcare {
+    min-height: 560px;
+  }
+
+  .hero-healthcare-overlay-container .hero-healthcare > div:last-child {
+    min-height: 560px;
+    padding: 60px 100px 60px 80px;
+    max-width: 800px;
+  }
+
+  .hero-healthcare-overlay-container .hero-healthcare h2 {
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  .hero-healthcare-overlay-container .hero-healthcare p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}
+/* stylelint-enable no-descending-specificity */
