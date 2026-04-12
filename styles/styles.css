@@ -484,21 +484,10 @@ main > .section:first-of-type > .default-content-wrapper:first-child:has(a[href*
 /* Video thumbnail inline images */
 main .default-content-wrapper > p:first-child > img:only-child {
   max-width: 100%;
+  max-height: 300px;
   height: auto;
   border-radius: 4px;
-}
-
-@media (width >= 900px) {
-  main .default-content-wrapper > p:first-child:has(> img:only-child) {
-    float: left;
-    width: 45%;
-    margin: 0 32px 16px 0;
-    line-height: 0;
-  }
-
-  main .default-content-wrapper > p:first-child:has(> img:only-child) + h3 {
-    padding-top: 16px;
-  }
+  object-fit: contain;
 }
 
 /* Specialty links - nested ul in default content (2-col grid) */
