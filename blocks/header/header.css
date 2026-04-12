@@ -44,6 +44,7 @@ header nav[aria-expanded='true'] {
     max-width: 1264px;
     padding: 0 32px;
     height: auto;
+    align-items: center;
   }
 
   header nav[aria-expanded='true'] {
@@ -164,7 +165,7 @@ header nav .nav-brand img {
 
 @media (width >= 900px) {
   header .nav-brand {
-    padding: 20px 0 16px;
+    padding: 24px 0 16px;
     font-size: var(--heading-font-size-l);
     color: var(--link-color);
   }
@@ -320,7 +321,7 @@ header nav .nav-tools {
     align-items: center;
     justify-content: flex-end;
     gap: 24px;
-    padding: 20px 0 16px;
+    padding: 24px 0 16px;
   }
 
   header nav .nav-tools ul {
