@@ -485,16 +485,29 @@ main > .section:first-of-type > .default-content-wrapper:first-child:has(a[href*
   white-space: nowrap;
 }
 
-/* Video thumbnail inline images */
+/* Video thumbnail inline images - float right on desktop */
 main .default-content-wrapper > p:first-child > img:only-child {
   max-width: 100%;
   max-height: 300px;
   height: auto;
-  border-radius: 4px;
+  border-radius: 8px;
   object-fit: contain;
 }
 
+@media (width >= 600px) {
+  main .default-content-wrapper > p:first-child > img:only-child {
+    float: right;
+    max-width: 45%;
+    margin: 0 0 16px 24px;
+  }
+}
+
 /* Specialty links - nested ul in default content (2-col grid) */
+main .default-content-wrapper > ul {
+  list-style: none;
+  padding-left: 0;
+}
+
 main .default-content-wrapper > ul > li > ul {
   list-style: none;
   padding: 0;
