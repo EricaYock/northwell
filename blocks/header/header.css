@@ -30,7 +30,7 @@ header nav[aria-expanded='true'] {
   min-height: 100dvh;
 }
 
-@media (width >= 900px) {
+@media (width >= 600px) {
   header .nav-wrapper {
     position: relative;
   }
@@ -136,7 +136,7 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
   transform: rotate(-45deg);
 }
 
-@media (width >= 900px) {
+@media (width >= 600px) {
   header nav .nav-hamburger {
     display: none;
     visibility: hidden;
@@ -163,7 +163,7 @@ header nav .nav-brand img {
   height: 20px;
 }
 
-@media (width >= 900px) {
+@media (width >= 600px) {
   header .nav-brand {
     padding: 24px 0 16px;
     font-size: var(--heading-font-size-l);
@@ -227,7 +227,7 @@ header nav .nav-sections ul > li > ul > li {
   font-weight: 400;
 }
 
-@media (width >= 900px) {
+@media (width >= 600px) {
   header nav .nav-sections {
     display: block;
     visibility: visible;
@@ -315,7 +315,7 @@ header nav .nav-tools {
   grid-area: tools;
 }
 
-@media (width >= 900px) {
+@media (width >= 600px) {
   header nav .nav-tools {
     display: flex;
     align-items: center;
