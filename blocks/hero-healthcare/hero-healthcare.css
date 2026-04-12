@@ -7,7 +7,14 @@
 /* Hero with diagonal overlay */
 .hero-healthcare {
   position: relative;
-  min-height: 500px;
+  min-height: 400px;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+/* Ensure the section wrapper also clips */
+.hero-healthcare-container,
+.hero-healthcare-overlay-container {
   overflow: hidden;
 }
 
@@ -92,7 +99,8 @@
 
 @media (width >= 600px) {
   .hero-healthcare {
-    min-height: 560px;
+    min-height: 500px;
+    max-height: 600px;
   }
 
   .hero-healthcare > div:last-child {
