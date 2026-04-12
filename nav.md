@@ -1,4 +1,4 @@
-- [Northwell Health](/)
+- [![Northwell Health](/icons/nwh-logo.svg)](/)
 
 ---
 
