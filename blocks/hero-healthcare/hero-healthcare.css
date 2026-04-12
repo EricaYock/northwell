@@ -1,27 +1,33 @@
-.hero-healthcare-container .hero-healthcare-wrapper {
+.hero-healthcare-container .hero-healthcare-wrapper,
+.hero-healthcare-overlay-container .hero-healthcare-wrapper {
   max-width: unset;
   padding: 0;
 }
 
-/* ===== Base hero (image top, text below - index page) ===== */
+/* Hero with diagonal overlay - default behavior */
 .hero-healthcare {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 480px;
+  min-height: 500px;
   overflow: hidden;
 }
 
 .hero-healthcare > div:first-child {
-  flex: 1 1 auto;
-  position: relative;
-  min-height: 280px;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
 
 .hero-healthcare picture {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+.hero-healthcare > div:first-child picture {
+  position: absolute;
+  inset: 0;
 }
 
 .hero-healthcare img {
@@ -32,22 +38,33 @@
 }
 
 .hero-healthcare > div:last-child {
-  padding: 24px;
-  background-color: var(--background-color);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 500px;
+  padding: 40px 24px;
+  max-width: 600px;
+  background-color: #002f6c;
+  clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);
 }
 
 .hero-healthcare h2 {
-  font-size: 36px;
+  color: #fff;
+  font-size: 32px;
   font-weight: 800;
   line-height: 1.1;
   text-transform: uppercase;
-  color: var(--text-color);
-  margin: 0 0 16px;
+  margin: 0 0 20px;
 }
 
 .hero-healthcare p {
-  margin: 0 0 16px;
-  color: var(--text-color);
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 24px;
+  max-width: 480px;
 }
 
 .hero-healthcare .button-container {
@@ -55,213 +72,40 @@
 }
 
 .hero-healthcare a.button {
-  background-color: transparent;
-  color: rgb(0 125 184);
+  display: inline-block;
+  color: #002f6c;
+  background-color: #6ecad4;
   border: none;
-  padding: 0;
-  font-weight: 400;
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 16px;
   text-decoration: none;
 }
 
 .hero-healthcare a.button:hover {
-  text-decoration: underline;
-  background-color: transparent;
+  background-color: #5bb8c2;
+  text-decoration: none;
 }
 
 @media (width >= 900px) {
   .hero-healthcare {
-    min-height: 500px;
-  }
-
-  .hero-healthcare > div:first-child {
-    min-height: 340px;
+    min-height: 560px;
   }
 
   .hero-healthcare > div:last-child {
-    padding: 32px;
-    max-width: 1200px;
+    min-height: 560px;
+    padding: 60px 100px 60px 80px;
+    max-width: 800px;
   }
 
   .hero-healthcare h2 {
     font-size: 48px;
     line-height: 52px;
-    margin: 0 0 24px;
-  }
-}
-
-/* ===== Overlay variant (text on image with diagonal shape) ===== */
-
-/* Use both .overlay class AND container-level class for AEM compatibility */
-.hero-healthcare.overlay {
-  min-height: 500px;
-}
-
-.hero-healthcare.overlay > div:first-child {
-  position: absolute;
-  inset: 0;
-  min-height: unset;
-  z-index: 0;
-}
-
-.hero-healthcare.overlay > div:first-child picture {
-  position: absolute;
-  inset: 0;
-}
-
-.hero-healthcare.overlay > div:last-child {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 500px;
-  padding: 40px 24px;
-  max-width: 600px;
-  background-color: #002f6c;
-  clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);
-}
-
-.hero-healthcare.overlay h2 {
-  color: #fff;
-  font-size: 32px;
-  line-height: 1.1;
-  margin: 0 0 20px;
-}
-
-.hero-healthcare.overlay p {
-  color: #fff;
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0 0 24px;
-  max-width: 480px;
-}
-
-.hero-healthcare.overlay a.button {
-  display: inline-block;
-  color: #002f6c;
-  background-color: #6ecad4;
-  border: none;
-  padding: 14px 32px;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 16px;
-  text-decoration: none;
-}
-
-.hero-healthcare.overlay a.button:hover {
-  background-color: #5bb8c2;
-  text-decoration: none;
-}
-
-@media (width >= 900px) {
-  .hero-healthcare.overlay {
-    min-height: 560px;
   }
 
-  .hero-healthcare.overlay > div:last-child {
-    min-height: 560px;
-    padding: 60px 100px 60px 80px;
-    max-width: 800px;
-  }
-
-  .hero-healthcare.overlay h2 {
-    font-size: 48px;
-    line-height: 52px;
-  }
-
-  .hero-healthcare.overlay p {
+  .hero-healthcare p {
     font-size: 18px;
     line-height: 1.6;
   }
 }
-
-/* ===== AEM container-level fallback for overlay variant ===== */
-/* stylelint-disable no-descending-specificity */
-.hero-healthcare-overlay-container .hero-healthcare-wrapper {
-  max-width: unset;
-  padding: 0;
-}
-
-.hero-healthcare-overlay-container .hero-healthcare {
-  min-height: 500px;
-}
-
-.hero-healthcare-overlay-container .hero-healthcare > div:first-child {
-  position: absolute;
-  inset: 0;
-  min-height: unset;
-  z-index: 0;
-}
-
-.hero-healthcare-overlay-container .hero-healthcare > div:first-child picture {
-  position: absolute;
-  inset: 0;
-}
-
-.hero-healthcare-overlay-container .hero-healthcare > div:last-child {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 500px;
-  padding: 40px 24px;
-  max-width: 600px;
-  background-color: #002f6c;
-  clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);
-}
-
-.hero-healthcare-overlay-container .hero-healthcare h2 {
-  color: #fff;
-  font-size: 32px;
-  line-height: 1.1;
-  margin: 0 0 20px;
-}
-
-.hero-healthcare-overlay-container .hero-healthcare p {
-  color: #fff;
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0 0 24px;
-  max-width: 480px;
-}
-
-.hero-healthcare-overlay-container .hero-healthcare a.button {
-  display: inline-block;
-  color: #002f6c;
-  background-color: #6ecad4;
-  border: none;
-  padding: 14px 32px;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 16px;
-  text-decoration: none;
-}
-
-.hero-healthcare-overlay-container .hero-healthcare a.button:hover {
-  background-color: #5bb8c2;
-  text-decoration: none;
-}
-
-@media (width >= 900px) {
-  .hero-healthcare-overlay-container .hero-healthcare {
-    min-height: 560px;
-  }
-
-  .hero-healthcare-overlay-container .hero-healthcare > div:last-child {
-    min-height: 560px;
-    padding: 60px 100px 60px 80px;
-    max-width: 800px;
-  }
-
-  .hero-healthcare-overlay-container .hero-healthcare h2 {
-    font-size: 48px;
-    line-height: 52px;
-  }
-
-  .hero-healthcare-overlay-container .hero-healthcare p {
-    font-size: 18px;
-    line-height: 1.6;
-  }
-}
-/* stylelint-enable no-descending-specificity */
