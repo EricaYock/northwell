@@ -111,6 +111,12 @@ header {
   height: var(--nav-height);
 }
 
+@media (width >= 900px) {
+  header {
+    height: 190px;
+  }
+}
+
 header .header,
 footer .footer {
   visibility: hidden;
@@ -473,4 +479,63 @@ main > .section:first-of-type > .default-content-wrapper:first-child:has(a[href*
   font-weight: 600;
   font-size: var(--body-font-size-s);
   white-space: nowrap;
+}
+
+/* Specialty links - nested ul in default content (2-col grid) */
+main .default-content-wrapper > ul > li > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* stylelint-disable no-descending-specificity */
+main .default-content-wrapper > ul > li > ul > li h4 {
+  font-size: var(--body-font-size-m);
+  font-weight: 400;
+  margin: 0;
+}
+
+main .default-content-wrapper > ul > li > ul > li h4 a:any-link {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+main .default-content-wrapper > ul > li > ul > li h4 a:hover {
+  text-decoration: underline;
+}
+/* stylelint-enable no-descending-specificity */
+
+@media (width >= 600px) {
+  main .default-content-wrapper > ul > li > ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 32px;
+  }
+}
+
+/* Inline image+text pairs (Spine Care, Limb Care style) */
+@media (width >= 900px) {
+  main .default-content-wrapper > picture:not(:first-child) {
+    float: right;
+    width: 40%;
+    margin: 0 0 24px 32px;
+    line-height: 0;
+  }
+
+  main .default-content-wrapper > picture:not(:first-child) img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  main .default-content-wrapper > picture:not(:first-child) + h3 {
+    clear: none;
+  }
+
+  /* Alternate: even pictures float left */
+  main .default-content-wrapper > picture:not(:first-child) + h3 + p + p + picture {
+    float: left;
+    margin: 0 32px 24px 0;
+  }
 }
