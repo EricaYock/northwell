@@ -294,6 +294,7 @@ main img {
   object-fit: cover;
 }
 
+
 .icon {
   display: inline-block;
   height: 24px;
@@ -551,6 +552,19 @@ main .default-content-wrapper > picture:not(:first-child) img {
 
   main .default-content-wrapper > picture:not(:first-child) + h3 {
     clear: none;
+  }
+}
+
+/* Standalone images in default content - constrain and float for side-by-side */
+main .default-content-wrapper > p > picture:only-child {
+  display: block;
+  max-width: 500px;
+}
+
+@media (width >= 600px) {
+  main .default-content-wrapper > p > picture:only-child {
+    float: right;
+    margin: 0 0 16px 24px;
   }
 }
 /* stylelint-enable no-descending-specificity */
