@@ -400,21 +400,22 @@ main h3 + .cards-news-wrapper {
   padding-top: 24px;
 }
 
-/* Featured media + text section (Islanders-style 50/50 split) */
-main .default-content-wrapper > picture:first-child {
+/* Featured media + text sections (Islanders, Spine Care, Limb Care) */
+main .default-content-wrapper > picture {
   display: block;
   line-height: 0;
   margin-bottom: 16px;
 }
 
-main .default-content-wrapper > picture:first-child img {
+main .default-content-wrapper > picture img {
   width: 100%;
   height: auto;
   max-height: 350px;
   object-fit: cover;
+  border-radius: 4px;
 }
 
-main .default-content-wrapper > picture:first-child + p {
+main .default-content-wrapper > picture + p {
   font-size: var(--heading-font-size-l);
   font-weight: 700;
   line-height: 1.2;
@@ -422,32 +423,9 @@ main .default-content-wrapper > picture:first-child + p {
   margin-top: 16px;
 }
 
-main .default-content-wrapper > picture:first-child + p + p {
-  font-size: var(--body-font-size-m);
-  font-weight: 300;
-  color: var(--text-color);
-  margin-bottom: 24px;
-}
-
-/* clearfix after Islanders text before next content */
-main .default-content-wrapper > picture:first-child + p + p + p {
-  clear: both;
-}
-
-@media (width >= 600px) {
-  main .default-content-wrapper > picture:first-child {
-    float: left;
-    width: 48%;
-    margin: 0 32px 24px 0;
-    max-height: 350px;
-    overflow: hidden;
-  }
-
-  main .default-content-wrapper > picture:first-child + p {
-    padding-top: 24px;
-    font-size: var(--heading-font-size-xl);
-    margin-top: 0;
-  }
+/* stylelint-disable-next-line no-descending-specificity */
+main .default-content-wrapper > picture + h3 {
+  margin-top: 16px;
 }
 
 /* Cookie consent banner - first default-content-wrapper in first section */
@@ -485,21 +463,13 @@ main > .section:first-of-type > .default-content-wrapper:first-child:has(a[href*
   white-space: nowrap;
 }
 
-/* Video thumbnail inline images - float right on desktop */
+/* Video thumbnail inline images */
 main .default-content-wrapper > p:first-child > img:only-child {
   max-width: 100%;
   max-height: 300px;
   height: auto;
   border-radius: 8px;
   object-fit: contain;
-}
-
-@media (width >= 600px) {
-  main .default-content-wrapper > p:first-child > img:only-child {
-    float: right;
-    max-width: 45%;
-    margin: 0 0 16px 24px;
-  }
 }
 
 /* Subheading labels between lists (e.g., "Related services") */
@@ -557,45 +527,10 @@ main .default-content-wrapper > ul > li > ul > li h4 a:hover {
   }
 }
 
-/* Inline image+text pairs (Spine Care, Limb Care style) */
-/* stylelint-disable no-descending-specificity */
-main .default-content-wrapper > picture:not(:first-child) img {
-  max-height: 300px;
-  width: auto;
-  max-width: 100%;
-  object-fit: cover;
-  border-radius: 4px;
-}
+/* Inline image+text pairs are handled by the generic picture rules above */
 
-@media (width >= 600px) {
-  main .default-content-wrapper > picture:not(:first-child) {
-    float: right;
-    width: 40%;
-    margin: 0 0 24px 32px;
-    line-height: 0;
-  }
-
-  main .default-content-wrapper > picture:not(:first-child) img {
-    width: 100%;
-    height: auto;
-    max-height: none;
-  }
-
-  main .default-content-wrapper > picture:not(:first-child) + h3 {
-    clear: none;
-  }
-}
-
-/* Standalone images in default content - constrain and float for side-by-side */
+/* Standalone images in default content - constrain size */
 main .default-content-wrapper > p > picture:only-child {
   display: block;
-  max-width: 500px;
+  max-width: 100%;
 }
-
-@media (width >= 600px) {
-  main .default-content-wrapper > p > picture:only-child {
-    float: right;
-    margin: 0 0 16px 24px;
-  }
-}
-/* stylelint-enable no-descending-specificity */
