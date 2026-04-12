@@ -1,4 +1,4 @@
-- [![Northwell Health Orthopaedic Institute](https://www.northwell.edu/themes/custom/theme_defined/assets/images/nwh-logo.svg)](/orthopaedic-institute)
+- [![Northwell Health Orthopaedic Institute](/content/assets/nwh-logo.svg)](/orthopaedic-institute)
 
 ---
 

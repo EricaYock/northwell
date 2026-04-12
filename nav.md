@@ -1,4 +1,4 @@
-- [![Northwell Health](https://www.northwell.edu/themes/custom/theme_defined/assets/images/nwh-logo.svg)](/)
+- [![Northwell Health](/content/assets/nwh-logo.svg)](/)
 
 ---
 
