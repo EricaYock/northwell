@@ -158,8 +158,9 @@ header .nav-brand a:any-link {
 }
 
 header nav .nav-brand img {
-  width: 128px;
-  height: auto;
+  display: block;
+  width: 180px;
+  height: 20px;
 }
 
 @media (width >= 900px) {
@@ -171,7 +172,8 @@ header nav .nav-brand img {
   }
 
   header nav .nav-brand img {
-    width: 240px;
+    width: 260px;
+    height: 28px;
   }
 
   header nav .nav-brand a:any-link {
