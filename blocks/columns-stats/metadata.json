@@ -1,0 +1,40 @@
+{
+  "variantName": "columns-stats",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-04-09T19:54:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.northwell.edu/",
+    "originPage": "healthcare homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "awards-stats",
+    "imagePattern": "noimg",
+    "structure": "text description + stat counters"
+  },
+  "contentPattern": {
+    "structure": "heading + description + CTA + stats",
+    "buttonCount": 1,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "awards and recognition sections",
+      "statistics and metrics displays",
+      "side-by-side text with counters"
+    ],
+    "notSuitableFor": [
+      "image-focused column layouts",
+      "simple text comparisons",
+      "product feature columns"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-09T19:54:00.000Z"
+  }
+}

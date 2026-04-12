@@ -1,0 +1,99 @@
+{
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://www.northwell.edu/"
+      ],
+      "description": "Main homepage with hero, featured services, news, and promotional content",
+      "blocks": [
+        {
+          "name": "hero-healthcare",
+          "instances": [".nwh--xl-cta-hero"]
+        },
+        {
+          "name": "cards-actions",
+          "instances": [".nwhlit--icon-promo"]
+        },
+        {
+          "name": "cards-specialties",
+          "instances": ["section .nwhlit--card-grid"]
+        },
+        {
+          "name": "columns-stats",
+          "instances": [".nwh--xl-stat-ticker"]
+        },
+        {
+          "name": "cards-news",
+          "instances": [".nwhlit-carousel--promo"]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero Section",
+          "selector": ".nwh--xl-cta-hero",
+          "style": null,
+          "blocks": ["hero-healthcare"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Quick Actions Section",
+          "selector": ".nwhlit--card-grid:first-of-type",
+          "style": null,
+          "blocks": ["cards-actions"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "MyNorthwell Promo Banner",
+          "selector": ".nwhlit--cta-hero",
+          "style": "dark",
+          "blocks": [],
+          "defaultContent": [".nwhlit--cta-hero"]
+        },
+        {
+          "id": "section-4",
+          "name": "Areas of Care Section",
+          "selector": "section .nwhlit--card-grid",
+          "style": null,
+          "blocks": ["cards-specialties"],
+          "defaultContent": ["h3"]
+        },
+        {
+          "id": "section-5",
+          "name": "Awards and Stats Section",
+          "selector": ".nwh--xl-stat-ticker",
+          "style": "dark",
+          "blocks": ["columns-stats"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-6",
+          "name": "Breakthroughs and News Section",
+          "selector": ".nwhlit-carousel--promo",
+          "style": null,
+          "blocks": ["cards-news"],
+          "defaultContent": ["h3", "p"]
+        },
+        {
+          "id": "section-7",
+          "name": "Gun Violence Prevention CTA",
+          "selector": ".nwhlit--cta-hero:last-of-type",
+          "style": "accent",
+          "blocks": [],
+          "defaultContent": [".nwhlit--cta-hero:last-of-type"]
+        }
+      ]
+    },
+    {
+      "name": "institute-page",
+      "urls": [
+        "https://www.northwell.edu/orthopaedic-institute"
+      ],
+      "description": "Service institute landing page with specialty areas, providers, and location information",
+      "blocks": []
+    }
+  ]
+}

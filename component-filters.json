@@ -19,9 +19,42 @@
     ]
   },
   {
+    "id": "cards-actions",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "cards-news",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "cards-specialties",
+    "components": [
+      "card"
+    ]
+  },
+  {
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "columns-stats",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "column",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
     ]
   },
   {

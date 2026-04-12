@@ -4,6 +4,7 @@ header .nav-wrapper {
   width: 100%;
   z-index: 2;
   position: fixed;
+  border-bottom: 1px solid var(--border-color);
 }
 
 header nav {
@@ -36,11 +37,14 @@ header nav[aria-expanded='true'] {
   }
 
   header nav {
-    display: flex;
-    justify-content: space-between;
-    gap: 0 32px;
+    display: grid;
+    grid-template:
+      'brand brand' auto
+      'sections tools' auto / 1fr auto;
+    gap: 0;
     max-width: 1264px;
     padding: 0 32px;
+    height: auto;
   }
 
   header nav[aria-expanded='true'] {
@@ -153,6 +157,26 @@ header nav .nav-brand img {
   height: auto;
 }
 
+@media (width >= 900px) {
+  header .nav-brand {
+    padding: 16px 0 8px;
+    font-size: var(--heading-font-size-l);
+    color: var(--link-color);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  header nav .nav-brand img {
+    width: 240px;
+  }
+
+  header nav .nav-brand a:any-link {
+    color: var(--link-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
 /* sections */
 header nav .nav-sections {
   grid-area: sections;
@@ -190,6 +214,8 @@ header nav .nav-sections ul > li > ul > li {
     display: block;
     visibility: visible;
     white-space: nowrap;
+    padding: 10px 0;
+    border-bottom: 3px solid var(--link-color);
   }
 
   header nav[aria-expanded='true'] .nav-sections {
@@ -269,4 +295,44 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+}
+
+@media (width >= 900px) {
+  header nav .nav-tools {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+    padding: 10px 0;
+    border-bottom: 3px solid var(--link-color);
+  }
+
+  header nav .nav-tools ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 24px;
+    align-items: center;
+  }
+
+  header nav .nav-tools li {
+    font-size: var(--body-font-size-s);
+    font-weight: 600;
+  }
+
+  header nav .nav-tools a:any-link {
+    color: var(--text-color);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  header nav .nav-tools a:hover {
+    color: var(--link-color);
+  }
+
+  header nav .nav-tools li:first-child a:any-link {
+    color: var(--link-color);
+    font-weight: 600;
+  }
 }

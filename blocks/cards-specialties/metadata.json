@@ -1,0 +1,40 @@
+{
+  "variantName": "cards-specialties",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-04-09T19:54:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.northwell.edu/",
+    "originPage": "healthcare homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "specialty-grid",
+    "imagePattern": "large",
+    "structure": "image + heading link"
+  },
+  "contentPattern": {
+    "structure": "image + heading link",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "medical specialty grids",
+      "department/institute listings",
+      "service area cards with images"
+    ],
+    "notSuitableFor": [
+      "text-only card listings",
+      "news article grids with descriptions",
+      "product feature cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-09T19:54:00.000Z"
+  }
+}

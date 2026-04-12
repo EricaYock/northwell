@@ -1,0 +1,40 @@
+{
+  "variantName": "cards-news",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-04-09T19:54:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.northwell.edu/",
+    "originPage": "healthcare homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "news-articles",
+    "imagePattern": "large",
+    "structure": "image + heading link + description"
+  },
+  "contentPattern": {
+    "structure": "image + heading + description",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "news article grids",
+      "blog post listings",
+      "content hub cards with images and descriptions"
+    ],
+    "notSuitableFor": [
+      "action/shortcut cards without images",
+      "simple link lists",
+      "icon-based feature cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-09T19:54:00.000Z"
+  }
+}

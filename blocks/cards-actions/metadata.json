@@ -1,0 +1,40 @@
+{
+  "variantName": "cards-actions",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-04-09T19:54:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.northwell.edu/",
+    "originPage": "healthcare homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "quick-actions",
+    "imagePattern": "noimg",
+    "structure": "heading link + description"
+  },
+  "contentPattern": {
+    "structure": "heading + description",
+    "buttonCount": 1,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "quick action links without images",
+      "service shortcut cards",
+      "navigation helper cards"
+    ],
+    "notSuitableFor": [
+      "image-heavy card grids",
+      "news article listings",
+      "product showcases"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-09T19:54:00.000Z"
+  }
+}

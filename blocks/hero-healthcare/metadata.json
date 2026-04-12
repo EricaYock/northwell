@@ -1,0 +1,40 @@
+{
+  "variantName": "hero-healthcare",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-04-09T19:54:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.northwell.edu/",
+    "originPage": "healthcare homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "healthcare-hero",
+    "imagePattern": "large",
+    "structure": "background image + heading + description + CTA"
+  },
+  "contentPattern": {
+    "structure": "heading + description + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "healthcare landing pages",
+      "hospital homepage hero sections",
+      "medical service pages with prominent imagery"
+    ],
+    "notSuitableFor": [
+      "text-only hero sections",
+      "product listing pages",
+      "blog article headers"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-09T19:54:00.000Z"
+  }
+}
