@@ -502,6 +502,24 @@ main .default-content-wrapper > p:first-child > img:only-child {
   }
 }
 
+/* Subheading labels between lists (e.g., "Related services") */
+/* stylelint-disable no-descending-specificity */
+main .default-content-wrapper > ul + p {
+  font-size: var(--heading-font-size-s);
+  font-weight: 700;
+  color: var(--text-color);
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+main .default-content-wrapper > ul + p + p {
+  font-size: var(--body-font-size-s);
+  color: var(--text-color-light);
+  margin-bottom: 8px;
+}
+/* stylelint-enable no-descending-specificity */
+
 /* Specialty links - nested ul in default content (2-col grid) */
 main .default-content-wrapper > ul {
   list-style: none;
