@@ -402,7 +402,8 @@ main h3 + .cards-news-wrapper {
 
 /* Featured media + text sections (Islanders, Spine Care, Limb Care) */
 main .default-content-wrapper > picture {
-  display: inline-block;
+  display: block;
+  width: fit-content;
   line-height: 0;
   margin-bottom: 16px;
 }
@@ -531,6 +532,7 @@ main .default-content-wrapper > ul > li > ul > li h4 a:hover {
 
 /* Standalone images in default content - constrain size */
 main .default-content-wrapper > p > picture:only-child {
-  display: inline-block;
+  display: block;
+  width: fit-content;
   max-width: 100%;
 }
