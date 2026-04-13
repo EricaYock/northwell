@@ -111,9 +111,9 @@ header {
   height: var(--nav-height);
 }
 
-@media (width >= 900px) {
+@media (width >= 600px) {
   header {
-    height: 190px;
+    height: auto;
   }
 }
 
