@@ -428,23 +428,31 @@ main .default-content-wrapper > picture + h3 {
   margin-top: 16px;
 }
 
-/* Side-by-side image+text layout for sections with picture + heading */
+/* Side-by-side image+text layout for media sections */
 /* stylelint-disable no-descending-specificity */
 @media (width >= 600px) {
+  main > .section:nth-of-type(3) > .default-content-wrapper,
   main > .section:nth-of-type(5) > .default-content-wrapper,
   main > .section:nth-of-type(6) > .default-content-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 32px;
-    align-items: start;
+    align-items: center;
   }
 
+  main > .section:nth-of-type(3) > .default-content-wrapper {
+    background-color: var(--light-color);
+    padding: 0;
+  }
+
+  main > .section:nth-of-type(3) > .default-content-wrapper > picture,
   main > .section:nth-of-type(5) > .default-content-wrapper > picture,
   main > .section:nth-of-type(6) > .default-content-wrapper > picture {
     grid-row: 1 / 20;
     margin: 0;
   }
 
+  main > .section:nth-of-type(3) > .default-content-wrapper > picture img,
   main > .section:nth-of-type(5) > .default-content-wrapper > picture img,
   main > .section:nth-of-type(6) > .default-content-wrapper > picture img {
     max-height: none;
