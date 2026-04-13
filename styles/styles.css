@@ -400,15 +400,17 @@ main h3 + .cards-news-wrapper {
   padding-top: 24px;
 }
 
-/* Featured media + text sections (Islanders, Spine Care, Limb Care) */
+/* Default content images - constrain container to image width */
 main .default-content-wrapper > picture {
   display: block;
+  width: fit-content;
   line-height: 0;
   margin-bottom: 16px;
 }
 
 main .default-content-wrapper > picture img {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   height: auto;
   max-height: 400px;
   object-fit: cover;
@@ -582,7 +584,7 @@ main .default-content-wrapper > ul > li > ul > li h4 a:hover {
 
 /* Inline image+text pairs are handled by the generic picture rules above */
 
-/* Standalone images in default content - constrain size */
+/* Standalone images in p tags */
 main .default-content-wrapper > p > picture:only-child {
   display: block;
   width: fit-content;
