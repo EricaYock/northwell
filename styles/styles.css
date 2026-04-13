@@ -445,6 +445,25 @@ main .default-content-wrapper > picture + h3 {
     padding: 0;
   }
 
+  /* Contact CTA section - image left, text right */
+  main > .section:nth-of-type(8) > .default-content-wrapper:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 32px;
+    align-items: center;
+  }
+
+  main > .section:nth-of-type(8) > .default-content-wrapper:nth-of-type(2) > picture {
+    grid-row: 1 / 20;
+    margin: 0;
+  }
+
+  main > .section:nth-of-type(8) > .default-content-wrapper:nth-of-type(2) > picture img {
+    max-height: none;
+    height: 100%;
+    border-radius: 0;
+  }
+
   main > .section:nth-of-type(3) > .default-content-wrapper > picture,
   main > .section:nth-of-type(5) > .default-content-wrapper > picture,
   main > .section:nth-of-type(6) > .default-content-wrapper > picture {
