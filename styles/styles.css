@@ -403,7 +403,6 @@ main h3 + .cards-news-wrapper {
 /* Featured media + text sections (Islanders, Spine Care, Limb Care) */
 main .default-content-wrapper > picture {
   display: block;
-  width: fit-content;
   line-height: 0;
   margin-bottom: 16px;
 }
@@ -411,7 +410,7 @@ main .default-content-wrapper > picture {
 main .default-content-wrapper > picture img {
   width: 100%;
   height: auto;
-  max-height: 350px;
+  max-height: 400px;
   object-fit: cover;
   border-radius: 4px;
 }
@@ -428,6 +427,32 @@ main .default-content-wrapper > picture + p {
 main .default-content-wrapper > picture + h3 {
   margin-top: 16px;
 }
+
+/* Side-by-side image+text layout for sections with picture + heading */
+/* stylelint-disable no-descending-specificity */
+@media (width >= 600px) {
+  main > .section:nth-of-type(5) > .default-content-wrapper,
+  main > .section:nth-of-type(6) > .default-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 32px;
+    align-items: start;
+  }
+
+  main > .section:nth-of-type(5) > .default-content-wrapper > picture,
+  main > .section:nth-of-type(6) > .default-content-wrapper > picture {
+    grid-row: 1 / 20;
+    margin: 0;
+  }
+
+  main > .section:nth-of-type(5) > .default-content-wrapper > picture img,
+  main > .section:nth-of-type(6) > .default-content-wrapper > picture img {
+    max-height: none;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+/* stylelint-enable no-descending-specificity */
 
 /* Cookie consent banner - first default-content-wrapper in first section */
 main > .section:first-of-type > .default-content-wrapper:first-child:has(a[href*="privacy"]) {
